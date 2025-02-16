@@ -1,0 +1,264 @@
+@keyframes bsfadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bshoverEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* Variables */
+:root {
+  --bs-bg-primary: #EFEDE8;     
+  --bs-bg-secondary: #9DC2C8;   
+  --bs-text-dark: #000;        
+  --bs-accent-color: #0BB8AE;   
+}
+
+/* Global Styles */
+* {
+  transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.hover-scale:hover {
+  animation: hoverEffect 0.5s ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+/* Container Styles */
+.bs-container {
+  max-width: 800px;
+  width: 100%;  /* Ensures it spans the full width */
+  margin: 0 auto; /* Centers the content */
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bs-session-details {
+  animation: bsFadeIn 0.6s ease-out;
+}
+
+/* Typography */
+.bs-mentor-name {
+  color: var(--bs-text-dark);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.bs-mentor-title,
+.bs-mentor-expertise {
+  color: #4B5563;
+  margin-bottom: 0.5rem;
+}
+
+.bs-input-label {
+  display: block;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid Layout */
+.bs-booking-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* Date Picker Styles */
+.bs-date-picker-container {
+  width: 100%;
+}
+
+.bs-date-picker-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--bs-bg-secondary);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.bs-date-picker-input:focus {
+  border-color: var(--bs-accent-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11, 184, 174, 0.2);
+}
+
+/* Time Slots */
+.bs-time-slot-container {
+  width: 100%;
+}
+
+.bs-time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+/* Header container styles */
+.bs-header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bs-header-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+
+.bs-time-slot-btn {
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #9DC2C8;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.bs-time-slot-btn:hover {
+  background-color: #0BB8AE; 
+  color: white;
+}
+
+.bs-time-slot-selected {
+  background-color: var(--bs-accent-color);
+  color: white;
+}
+
+/* Topic Input */
+.bs-topic-container {
+  margin: 1.5rem 0;
+}
+
+.bs-topic-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--bs-bg-secondary);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.bs-topic-input:focus {
+  border-color: var(--bs-accent-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11, 184, 174, 0.2);
+}
+
+/* Summary Box */
+.bs-summary-box {
+  background-color: rgba(157, 194, 200, 0.1);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.bs-summary-title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--bs-text-dark);
+}
+
+.bs-summary-text {
+  color: #4B5563;
+  margin-bottom: 0.5rem;
+}
+
+/* Confirm Button */
+.bs-confirm-btn {
+  width: auto;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 1rem 2rem;
+  background-color: var(--bs-accent-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+.bs-confirm-btn:hover {
+  background-color: var(--bs-text-dark);
+}
+
+/* Empty State */
+.bs-empty-state {
+  text-align: center;
+  padding: 2rem;
+}
+
+.bs-empty-state-icon {
+  width: 4rem;
+  height: 4rem;
+  color: var(--bs-bg-secondary);
+  margin: 0 auto 1rem auto;
+}
+
+.bs-empty-state-text {
+  color: #6B7280;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .bs-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .bs-booking-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bs-time-slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

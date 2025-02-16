@@ -1,0 +1,168 @@
+.teacher-schedule-wrapper {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #EFEDE8;
+  min-height: 100vh;
+}
+
+.teacher-schedule-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.teacher-login-status {
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-schedule-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+}
+
+.teacher-date-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.teacher-date-label {
+  font-weight: 500;
+  color: #000;
+}
+
+/* DatePicker custom styles */
+.teacher-date-picker .react-datepicker-wrapper {
+  width: 100%;
+}
+
+.teacher-date-picker .react-datepicker__input-container input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #9DC2C8;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.teacher-date-picker .react-datepicker__input-container input:focus {
+  outline: none;
+  border-color: #0BB8AE;
+  box-shadow: 0 0 0 3px rgba(11, 184, 174, 0.1);
+}
+
+.teacher-timeslot-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.teacher-timeslot-label {
+  font-weight: 500;
+  color: #000;
+}
+
+.teacher-timeslot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.teacher-timeslot-button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #9DC2C8;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.teacher-timeslot-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(100%);
+  transition: transform 0.2s ease;
+}
+
+.teacher-timeslot-button:hover::before {
+  transform: translateY(0);
+}
+
+.teacher-timeslot-button:hover {
+  background-color: #8bb1b7;
+  transform: translateY(-1px);
+}
+
+.teacher-timeslot-button.selected {
+  background-color: #0BB8AE;
+  transform: scale(1.02);
+}
+
+.teacher-save-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0BB8AE;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.teacher-save-button:hover {
+  background-color: #0aa69d;
+}
+
+.teacher-save-button:disabled {
+  background-color: #9DC2C8;
+  cursor: not-allowed;
+}
+
+.teacher-schedule-list {
+  margin-top: 2rem;
+}
+
+.teacher-schedule-list h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.teacher-schedule-items {
+  list-style: none;
+  padding: 0;
+}
+
+.teacher-schedule-item {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+  border-left: 4px solid #9DC2C8;
+}
+
+.teacher-schedule-item.available {
+  border-left-color: #0BB8AE;
+}

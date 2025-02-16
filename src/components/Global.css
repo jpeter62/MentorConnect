@@ -1,0 +1,192 @@
+/* Global.css */
+:root {
+    --primary-bg: #EFEDE8;
+    --secondary-bg: #9DC2C8;
+    --dark: #000;
+    --accent: #0BB8AE;
+  }
+  
+  /* Common styles */
+  .page-container {
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+  }
+  
+  .section-padding {
+    padding: 6rem 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* Animation classes */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Cards and sections */
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  
+  /* Form styles */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+  
+  .btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #099a9a;
+    transform: translateY(-2px);
+  }
+
+/* Add these new styles for contact cards */
+.contact-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #0BB8AE;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover::before {
+  transform: scaleX(1);
+}
+
+.card-icon {
+  background: rgba(11, 184, 174, 0.1);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .card-icon {
+  background: #0BB8AE;
+}
+
+.contact-card:hover .card-icon svg {
+  color: white;
+}

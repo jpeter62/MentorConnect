@@ -1,0 +1,243 @@
+/* Container and Layout */
+.ssettings-container {
+  min-height: 100vh;
+  background-color: #EFEDE8;
+  padding: 1.5rem;
+}
+
+.ssettings-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header Styles */
+.ssettings-header {
+  background: linear-gradient(to right, #0BB8AE, #9DC2C8, #EFEDE8);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.sheader-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sheader-content h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sheader-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-button, .logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.edit-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.logout-button {
+  background-color: white;
+  color: black;
+}
+
+/* Main Content Layout */
+.smain-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Card Styles */
+.settings-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.settings-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.settings-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Form Styles */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #9DC2C8;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+  border-color: #0BB8AE;
+  box-shadow: 0 0 0 3px rgba(11, 184, 174, 0.2);
+  outline: none;
+}
+
+/* Profile Preview Styles */
+.profile-preview {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.preview-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: 100%;
+  margin: 0 1rem;
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Icons */
+.sicon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ssection-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #0BB8AE;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-preview {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sheader-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .availability-section-horizontal {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .day-availability-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px; /* Adjust based on label size */
+  }
+  
+  .time-dropdown select {
+    width: 300px; /* Ensure enough space for dropdowns */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .capitalize {
+    text-transform: capitalize;
+  }
+  
+}
