@@ -1,0 +1,231 @@
+/* styles.css */
+.requests-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .requests-header {
+    margin-bottom: 2rem;
+  }
+  
+  .header-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header-title h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  
+  .request-count {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(11, 184, 174, 0.1);
+    color: #0BB8AE;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .search-bar {
+    position: relative;
+    flex: 1;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  
+  .search-bar input:focus {
+    border-color: #0BB8AE;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #666;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .tab-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background-color: #f5f5f5;
+    color: #666;
+  }
+  
+  .tab-button.active {
+    background-color: #0BB8AE;
+    color: white;
+  }
+  
+  .filter-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #f5f5f5;
+    color: #666;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #eaeaea;
+  }
+  
+  .requests-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .request-card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+  }
+  
+  .request-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .request-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .student-info {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .student-info img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .student-details h3 {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+  }
+  
+  .course-info {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .topic {
+    color: #0BB8AE;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .session-info {
+    text-align: right;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .request-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .btn-accept, .btn-decline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .btn-accept {
+    background-color: #0BB8AE;
+    color: white;
+  }
+  
+  .btn-accept:hover {
+    background-color: #0aa69d;
+  }
+  
+  .btn-decline {
+    background-color: #f5f5f5;
+    color: #666;
+  }
+  
+  .btn-decline:hover {
+    background-color: #eaeaea;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+  }
+  
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header-controls {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .request-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .session-info {
+      text-align: left;
+    }
+  }

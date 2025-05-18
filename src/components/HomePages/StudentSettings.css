@@ -1,0 +1,173 @@
+/* Container and Layout */
+.msettings-container {
+    min-height: 100vh;
+    background-color: #EFEDE8;
+    padding: 1.5rem;
+  }
+  
+  .msettings-wrapper {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Header Styles */
+  .msettings-header {
+    background: linear-gradient(to right, #0BB8AE, #9DC2C8, #EFEDE8);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .mheader-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .mheader-content h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mheader-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .medit-button, .mlogout-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+  
+  .medit-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .medit-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .mlogout-button {
+    background-color: white;
+    color: black;
+  }
+  
+  .mlogout-button:hover {
+    background-color: #EFEDE8;
+  }
+  
+  /* Main Content Layout */
+  .mmain-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Card Styles */
+  .msettings-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .msettings-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .msettings-card h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Form Styles */
+  .mform-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .mform-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .mform-group.full-width {
+    grid-column: span 2;
+  }
+  
+  .mform-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .mform-group input,
+  .mform-group select {
+    padding: 0.75rem;
+    border: 1px solid #9DC2C8;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+  }
+  
+  .mform-group input:focus,
+  .mform-group select:focus {
+    border-color: #0BB8AE;
+    box-shadow: 0 0 0 3px rgba(11, 184, 174, 0.2);
+    outline: none;
+  }
+  
+  /* Interest Tags */
+  .minterests-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .minterest-tag {
+    background-color: #EFEDE8;
+    color: black;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .mremove-interest {
+    color: #0BB8AE;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  
+  .mremove-interest:hover {
+    color: #09a19a;
+  }
+  
+  .madd-interest {
+    color: #0BB8AE;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }

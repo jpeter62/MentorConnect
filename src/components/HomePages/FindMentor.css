@@ -1,0 +1,148 @@
+.mentors-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 80px;
+}
+
+.fheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  right: 24px;
+  background-color: white;
+  z-index: 10;
+}
+
+.fheader h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.fmentors-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mentors-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.mentor-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: white;
+  height: 100%;
+}
+
+.mentor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  margin-bottom: 16px;
+}
+
+.mentor-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.mentor-card .title {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+}
+
+/* Updated expertise tags styling */
+.expertise-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+  flex-grow: 1;
+  min-height: 80px; /* Ensure consistent height for tag container */
+}
+
+.skill-tag {
+  background-color: #EFEDE8;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  height: 28px; /* Fixed height for all tags */
+  white-space: nowrap; /* Prevent text wrapping within tags */
+  max-width: calc(100% - 8px); /* Prevent overflow */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 12px 0;
+}
+
+.star-icon {
+  color: #0BB8AE;
+}
+
+.availability {
+  font-size: 14px;
+  color: #9DC2C8;
+  margin: 8px 0;
+}
+
+.book-button {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #0BB8AE;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: auto;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.book-button:hover {
+  background-color: #099089;
+}
