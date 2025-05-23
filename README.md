@@ -46,6 +46,6 @@ Mentor Connect bridges the gap between students and mentors by providing:
 
 ---
 
-## 📂 Folder Structure (Basic)
+
 
 
